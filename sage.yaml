@@ -1,0 +1,13 @@
+name: "waggle-davis6410"
+version: "0.1.0"
+description: "Waggle plugin to get data from a Davis 6410 Wind Sensor"
+keywords: ""
+authors: "Eric Van Hensbergen"
+collaborators: ""
+funding: ""
+license: ""
+homepage: ""
+source:
+  architectures:
+    - "linux/amd64"
+    - "linux/arm64"
