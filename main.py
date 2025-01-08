@@ -1,11 +1,12 @@
 from waggle.plugin import Plugin
 from serial import Serial
-import re
+import os
 
-pattern = r'\{wind: (\d+) (\d+) \((\d+) (\d+) (\d+)\)\}'
+# The port may be different depending on yoru system
+port = os.getenv('SERIAL_PORT', '/dev/ttyACM1')
 
 def main():
-    with Plugin() as plugin, Serial("/dev/cu.usbmodem2101", baudrate=9600) as dev:
+    with Plugin() as plugin, Serial(port, baudrate=9600) as dev:
         dev.readline()
         while True:
             data = dev.readline()
